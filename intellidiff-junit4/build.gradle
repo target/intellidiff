@@ -1,0 +1,13 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'junit:junit:4.12'
+    implementation project(':intellidiff')
+    implementation project(':tools')
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

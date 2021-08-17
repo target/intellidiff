@@ -1,0 +1,1 @@
+include ':intellidiff', ':intellidiff-junit4', ':intellidiff-junit5', ':tools'

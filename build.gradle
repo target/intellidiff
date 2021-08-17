@@ -1,0 +1,26 @@
+buildscript {
+    ext.kotlin_version = '1.4.31'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    group = 'com.target.intellidiff'
+    version = "0.0.6-SNAPSHOT"
+    tasks.withType(Javadoc) { excludes = ['**/*.kt'] }
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+    tasks.withType(Test) { testLogging { exceptionFormat 'full' } }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

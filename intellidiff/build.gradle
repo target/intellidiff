@@ -1,0 +1,15 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+apply plugin: 'java-library'
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+  implementation "org.jetbrains.kotlin:kotlin-reflect"
+  testImplementation 'junit:junit:4.12'
+  testImplementation project(':tools')
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
